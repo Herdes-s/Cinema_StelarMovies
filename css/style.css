@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #868686;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #000000;
+  text-shadow: 1px 1px 2px rgb(133, 133, 133);
+}
+
+#cinema {
+  padding: 12px;
+  background-color: #ddd;
+  border: black solid 1px;
+  box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.3);
+}
+
+.fileira {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assento {
+  margin: 5px;
+  padding: 8px;
+  cursor: pointer;
+  border: solid 1px rgb(116, 116, 116);
+  background-color: rgb(255, 255, 255);
+}
+
+.vendido {
+  background-color: rgb(223, 12, 12);
+  color: white;
+  border: solid 1px rgb(116, 116, 116);
+}
