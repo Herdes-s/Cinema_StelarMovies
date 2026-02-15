@@ -19,8 +19,13 @@ export function renderizarAssentos(sessao) {
       }
 
       botao.onclick = () => {
-        sessao.venderAssento(assento.id);
-        renderizarAssentos(sessao);
+        const resultado = sessao.venderAssento(assento.id);
+
+        console.log(resultado.mensagem);
+
+        if (resultado.sucesso) {
+          renderizarAssentos(sessao);
+        }
       };
 
       linha.appendChild(botao);

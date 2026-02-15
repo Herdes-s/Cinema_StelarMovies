@@ -7,7 +7,7 @@ export class SeatManager {
     const assentos = [];
     const fileiras = capacidade / 10;
 
-    for (let i = 0; i <= fileiras; i++) {
+    for (let i = 0; i < fileiras; i++) {
       const letraFileira = String.fromCharCode(65 + i);
 
       for (let j = 1; j <= 10; j++) {
@@ -21,7 +21,7 @@ export class SeatManager {
   }
 
   venderAssento(id) {
-    const assento = this.assentos.find((a) => a.id == id);
+    const assento = this.assentos.find((a) => a.id === id);
 
     if (!assento) {
       return {

@@ -1,12 +1,12 @@
 import { SeatManager } from "../SeatManager.js";
 
 export class Sessao {
-  constructor(filme, sala, horario, capacidade) {
+  constructor(filme, sala, horario) {
     this.filme = filme;
     this.sala = sala;
     this.horario = horario;
 
-    this.seatManager = new SeatManager(capacidade);
+    this.seatManager = new SeatManager(sala.capacidade);
   }
 
   venderAssento(id) {
