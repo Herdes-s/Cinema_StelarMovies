@@ -12,4 +12,5 @@ const sessao1 = new Sessao(batman, sala1, "09:00");
 sala1.adicionarSessao(sessao1);
 
 console.log(sessao1);
+
 renderizarAssentos(sessao1);
