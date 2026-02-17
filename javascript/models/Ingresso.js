@@ -1,5 +1,5 @@
 export class Ingresso {
-  constructor(sessao, assentoId, preco) {
+  constructor(sessao, assentoId, preco = 30) {
     this.id = crypto.randomUUID();
     this.filme = sessao.filme.titulo;
     this.horario = sessao.horario;

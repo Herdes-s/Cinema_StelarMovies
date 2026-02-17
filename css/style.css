@@ -1,56 +1,278 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-  height: 100vh;
-  font-family: "Open Sans", sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  height: 100%;
+  flex: 1;
+}
+
+header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #868686;
+  padding: 20px;
+  background: #1c1c1c;
 }
 
-h1 {
+header h1 {
+  color: #e50914;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #e50914;
+}
+
+.banner {
+  height: 300px;
+  background: linear-gradient(to right, #000, #1c1c1c);
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  font-size: 32px;
+}
+
+.filmes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.filme-card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.filme-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.filme-card h3 {
+  padding: 10px;
+}
+
+.genero {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 0 10px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.genero.acao {
+  background-color: #e50914;
+}
+
+.genero.drama {
+  background-color: #6a0dad;
+}
+
+.genero.ficcao {
+  background-color: #1e90ff;
+}
+
+.genero.romance {
+  background-color: rgb(255, 0, 76);
+}
+
+.filme-card:hover {
+  transform: scale(1.05);
+}
+
+footer {
   text-align: center;
-  margin-bottom: 24px;
-  color: #000000;
-  text-shadow: 1px 1px 2px rgb(133, 133, 133);
+  padding: 20px;
+  background: #1c1c1c;
+  margin-top: 40px;
 }
 
-#cinema {
-  padding: 12px;
-  background-color: #ddd;
-  border: black solid 1px;
-  box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.3);
+/* Detalhes */
+
+#app {
+  text-align: center;
+  padding: 20px;
 }
+
+.detalhes-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.detalhes-poster img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.detalhes-info {
+  max-width: 500px;
+}
+
+.detalhes-info h2 {
+  margin-bottom: 20px;
+}
+
+.detalhes-info p {
+  margin-bottom: 10px;
+}
+
+.btn-comprar,
+.btn-voltar {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-comprar {
+  background-color: #e50914;
+  color: white;
+}
+
+.btn-voltar {
+  background-color: gray;
+  color: white;
+}
+
+/* Ingressos */
+
+.ingressos-container {
+  padding: 20px;
+}
+
+.ingresso-card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Button  */
 
 .fileira {
-  margin-bottom: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
 }
-
 .assento {
-  margin: 5px;
-  padding: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+  border: none;
   cursor: pointer;
-  border: solid 1px rgb(116, 116, 116);
-  background-color: rgb(255, 255, 255);
+  transition: 0.2s ease;
 }
 
-.vendido {
-  background-color: rgb(223, 12, 12);
+.assento:hover {
+  transform: scale(1.15);
+}
+
+.assento.vendido {
+  background-color: #e50914;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.tela {
+  width: 60%;
+  height: 40px;
+  background: linear-gradient(to bottom, #ffffff, #777);
+  margin: 30px auto 50px auto;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-bottom: 20px;
+  background: gray;
   color: white;
-  border: solid 1px rgb(116, 116, 116);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Notficação */
+
+#notificacao {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: #2ecc71;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: 0.3s ease;
+  font-weight: bold;
+  z-index: 999;
+}
+
+#notificacao.erro {
+  background: #e50914;
+}
+
+#notificacao.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Meus ingressos */
+
+.card-ingresso {
+  background: #111;
+  border: 2px solid #e50914;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px auto;
+  width: 300px;
+  text-align: left;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
